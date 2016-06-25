@@ -1,0 +1,33 @@
+
+///*********************************************************************************
+//*
+//* ECXcx
+//* Author: Zhu Fei
+//* Email:  zhufei_13967158519@hotmail.com
+//*
+//*********************************************************************************/
+
+feature( wxBase ) {
+	includes	+=	. \
+					../../inc \
+					../../ThirdPartyTools/inc
+	libpaths	+=	../../lib \
+					../../ThirdPartyTools/lib
+	libs		+=	wxbase wxcore
+
+	specific( make ) {
+		compilerflags	+=	-g
+		macros		=	_FILE_OFFSET_BITS=64 _LARGE_FILES _THREAD_SAFE
+		macros		+=	__WXX11__ __WXUNIVERSAL__
+		includes	+=	/usr/local/include
+		libpaths	+=	/usr/local/lib
+	} else {
+		subsystem	=	2
+		common_defines	=	WIN32 _WINDOWS
+		unicode		=	1
+		macros		=	WIN32_LEAN_AND_MEAN _CRT_SECURE_NO_WARNINGS _WINSOCK_DEPRECATED_NO_WARNINGS
+		macros		+=	__WXMSW__
+	}
+	macros	+=	WXUSINGDLL
+}
+

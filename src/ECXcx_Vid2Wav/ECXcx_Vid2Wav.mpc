@@ -1,0 +1,42 @@
+
+///*********************************************************************************
+//*
+//* ECXcx
+//* Author: Zhu Fei
+//* Email:  zhufei_13967158519@hotmail.com
+//*
+//*********************************************************************************/
+
+project( ECXcx_Vid2Wav ): wxBase {
+	exeout		=	../../bin
+	exename		=	ECXcx_Vid2Wav
+
+	Header_Files {
+		ECXcx_App.h
+		../../inc/ECXcx_ResMgr.h
+		../../inc/ECXcx_Tools.h
+		../../inc/ECXcx_Log.h
+		ECXcx_MainFrame.h
+		ECXcx_PanelMain.h
+		ECXcx_PanelVidInfo.h
+		ECXcx_TreeCtrl.h
+		ECXcx_Synthesizer.h
+		ECXcx_Transcoder.h
+	}
+	Source_Files {
+		ECXcx_App.cpp
+		../ECXcx_Common/ECXcx_ResMgr.cpp
+		../ECXcx_Common/ECXcx_Tools.cpp
+		../ECXcx_Common/ECXcx_Log.cpp
+		ECXcx_MainFrame.cpp
+		ECXcx_PanelMain.cpp
+		ECXcx_PanelVidInfo.cpp
+		ECXcx_TreeCtrl.cpp
+		ECXcx_Synthesizer.cpp
+		ECXcx_Transcoder.cpp
+	}
+	Resource_Files {
+		ECXcx_Vid2Wav.rc
+	}
+}
+
